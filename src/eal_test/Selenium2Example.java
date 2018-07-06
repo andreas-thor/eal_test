@@ -78,7 +78,7 @@ public class Selenium2Example {
 		driver = new ChromeDriver();
 		try {
 //			login ("publisher", "publisher");
-			login ("e", "e", "datenbanken");
+			login ("e", "e", "paedagogik");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			driver.quit();
@@ -98,12 +98,12 @@ public class Selenium2Example {
 				
 				System.out.println("Page=" + page);
 
-				hasNext = getListOfItems("itemsc", page);
+				hasNext = getListOfItems("item", page);
 				getPreview();
-//				downloadItems ("onyx");
-//				downloadItems ("ilias");
-//				downloadItems ("moodle");
-//				downloadItems ("json");
+				downloadItems ("onyx");
+				downloadItems ("ilias");
+				downloadItems ("moodle");
+				downloadItems ("json");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 				driver.quit();
